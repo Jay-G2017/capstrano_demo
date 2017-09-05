@@ -38,7 +38,7 @@ set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', '
 set :keep_releases, 2
 
 set :rvm_type, :auto                     # Defaults to: :auto
-set :rvm_ruby_version, '2.3.1'      # Defaults to: 'default'
+set :rvm_ruby_version, '2.3.3'      # Defaults to: 'default'
 
 namespace :deploy do
   task :start do
