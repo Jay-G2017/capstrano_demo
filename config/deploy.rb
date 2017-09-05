@@ -2,7 +2,7 @@
 lock '3.4.0'
 
 set :application, 'capstrano_demo'
-set :repo_url, 'https://github.com/polarlights/capstrano_demo'
+set :repo_url, 'https://github.com/Jay-G2017/capstrano_demo'
 set :pid_file, "#{deploy_to}/current/tmp/pids/unicorn.pid"
 set :unicorn_config_file, "#{current_path}/config/unicorn.rb"
 set :listen_port, 5000
@@ -33,6 +33,7 @@ set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', '
 
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
+set :bundle_flags, '--local --deployment --quiet'
 
 # Default value for keep_releases is 5
 set :keep_releases, 2
